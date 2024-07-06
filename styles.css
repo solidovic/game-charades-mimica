@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background: radial-gradient(circle, #3A6F01, #2A5100);
+}
+
+/* Basic body styling */
+body {
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Screen styles */
+.screen {
+  position: absolute;
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* Main Menu Screen background */
+#screen1 {
+  background: radial-gradient(circle, #3A6F01, #2A5100);
+}
+
+/* Game Screen background */
+#screen2 {
+  background: radial-gradient(circle, #003B00, #046A04);
+}
+
+/* Button styling */
+.button {
+  background: linear-gradient(to bottom, #FFC938, #FFD66A);
+
+  width: 93%;
+  max-width: 600px;
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+  box-shadow: 6px 8px 4px rgba(0, 0, 0, 0.75);
+
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  color: #214000;
+  cursor: pointer;
+}
+
+.button:active {
+  background: linear-gradient(to bottom, #9B7100, #DBAA27);
+  color: #FFDE84;
+}
+
+/* Center the button vertically for start screen */
+#start-button {
+  z-index: 10;
+}
+
+/* Crocodile image */
+.crocodile {
+  z-index: 100;
+
+  width: 85%;
+  max-width: 466px;
+  margin-bottom: -9px;
+}
+
+/* Rules section */
+.rules {
+  background: #003B00;
+
+  width: 93%;
+  max-width: 600px;
+  box-sizing: border-box;
+
+  margin: 20px auto 0 auto;
+  padding: 15px;
+
+  border-radius: 10px;
+  box-shadow: 6px 8px 4px rgba(0, 0, 0, 0.75);
+
+  text-align: center;
+  color: white;
+}
+
+.rules h2 {
+  padding-bottom: 20px;
+
+  font-size: 36px;
+  color: #FFE49C;
+}
+
+.rules p {
+  padding: 10px 0;
+
+  line-height: 140%;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+/* Word display */
+.word {
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  font-size: 50px;
+  color: #FFFFFF;
+}
+
+#next-word-button {
+  position: absolute;
+  bottom: 60px;
+}
+
+/* LG Optimus L70, BlackBerry Z30 (360px), iPhone 4 (320px) */
+@media screen and (max-width: 384px) {
+  .button {
+    box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    font-size: 24px;
+  }
+
+  .crocodile {
+    width: 70%;
+    margin-bottom: -5px;
+  }
+
+  .rules {
+    box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.75);
+    margin: 20px auto 0 auto;
+    padding: 5px;
+  }
+
+  .rules h2 {
+    font-size: 24px;
+    padding-bottom: 0;
+  }
+
+  .rules p {
+    padding: 7px 0;
+
+    font-size: 16px;
+  }
+
+  .word {
+    font-size: 24px;
+  }
+
+  #next-word-button {
+    bottom: 20px;
+  }
+}
+
+/* Jio Phone 2 */
+@media screen and (max-width: 240px) {
+  .button {
+    box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .crocodile {
+    width: 55%;
+    margin-bottom: -4px;
+  }
+
+  .rules {
+    box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.75);
+    margin: 10px auto 0 auto;
+    padding: 5px;
+  }
+
+  .rules h2 {
+    font-size: 18px;
+    padding-bottom: 0;
+  }
+
+  .rules p {
+    padding: 5px 0;
+
+    line-height: 135%;
+    font-size: 12px;
+  }
+
+  .word {
+    font-size: 18px;
+  }
+
+  #next-word-button {
+    bottom: 20px;
+  }
+}

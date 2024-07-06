@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <title>Charades (Mimica)</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="screen1" class="screen active">
+    <img src="./crocodile.png" alt="crocodile image" class="crocodile">
+    <button id="start-button" class="button">[START_BUTTON]</button>
+    <div class="rules">
+      <h2 id="lng-rules-title">[RULES_OF_THE_GAME]</h2>
+      <p id="lng-rules-text1">[RULES_TEXT1]</p>
+      <p id="lng-rules-text2">[RULES_TEXT2]</p>
+      <p id="lng-rules-text3">[RULES_TEXT3]</p>
+    </div>
+  </div>
+
+  <div id="screen2" class="screen">
+    <div id="word" class="word">[WORD]</div>
+    <button id="next-word-button" class="button">[NEXT_WORD]</button>
+  </div>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="./telegram-and-translations.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
